@@ -4,15 +4,12 @@ import com.intive.fdv.rentbike.dao.PromotionDao;
 import com.intive.fdv.rentbike.model.*;
 import com.intive.fdv.rentbike.service.PromotionService;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -36,9 +33,9 @@ public class PromotionServiceTest {
     private static Double PRICE_DAY = 20.0;
     private static Double PRICE_WEEK = 60.0;
 
-    private static Rent rentByHour = new Rent(RENT_ID_DAY,PRICE_DAY,rentTypeHour,currency);
-    private static Rent rentByDay = new Rent(RENT_ID_HOUR,PRICE_HOUR,rentTypeHour,currency);
-    private static Rent rentByWeek = new Rent(RENT_ID_WEEK,PRICE_WEEK,rentTypeHour,currency);
+    private static Rent rentByHour = new Rent(RENT_ID_DAY,PRICE_HOUR,rentTypeHour,currency);
+    private static Rent rentByDay = new Rent(RENT_ID_HOUR,PRICE_DAY,rentTypeDay,currency);
+    private static Rent rentByWeek = new Rent(RENT_ID_WEEK,PRICE_WEEK,rentTypeWeek,currency);
 
     private static Bike bike1 = new Bike(1L,"ABC232");
     private static Bike bike2 = new Bike(2L,"ABC565");
@@ -74,7 +71,6 @@ public class PromotionServiceTest {
 
     @BeforeClass
     public static void onSetup() {
-
 
         promotionList.add(promotion);
         when(promotionDao.getPromotions()).thenReturn(promotionList);
