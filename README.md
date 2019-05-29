@@ -5,4 +5,7 @@ intive fdv proyect, test
 
 ### method: applyPromotion
 #### param RentContract
-#### return same object with the property promotion populated
+
+this methods populated the promotion taking in concern the min and max rent number associated
+
+#### return RentContrat  
