@@ -1,6 +1,5 @@
 # rentbikes 
 OOP exercise with unit test, applying model servcice controller pattern
-intive fdv proyect, test
 
 # PromotionService
 
